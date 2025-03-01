@@ -4,16 +4,36 @@
     height: 100vh;
     background: linear-gradient(to bottom, #e0c2ff, #d0b0ff);
     overflow: hidden;
+  }
+  
+  .top-cloud, .medium-cloud, .bottom-cloud {
+    position: absolute;
+    width: 100%;
+    height: 33.33%; /* Divide o céu em três partes iguais */
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+  }
+  
+  .top-cloud {
+    bottom: 40%;
+    opacity: 0.2;
+  }
+  
+  .medium-cloud {
+    bottom: 20%;
+    opacity: 0.5;
+  }
+  
+  .bottom-cloud {
+    bottom: 0%;
+    opacity: 0.8;
   }
   
   .cloud {
     background: white;
     border-radius: 50%;
-    opacity: 0.8;
+    opacity: 1.0;
     margin: -10%;
   }
   
