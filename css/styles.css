@@ -95,7 +95,7 @@
   }
   
   .cloud-medium {
-    animation: cloud-move1 8s infinite linear;
+    animation: cloud-move1 7s infinite linear;
   }
 
   .cloud-large {
@@ -103,5 +103,5 @@
   }
 
   .cloud-small {
-    animation: cloud-move3 12s infinite linear;
+    animation: cloud-move3 15s infinite linear;
   }
