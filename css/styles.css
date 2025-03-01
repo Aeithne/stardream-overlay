@@ -1,0 +1,53 @@
+.sky {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #e0c2ff, #d0b0ff);
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .cloud {
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    margin: -10%;
+  }
+  
+  .cloud-medium {
+    width: 19vw; /* Usando vw para tamanhos relativos à viewport */
+    height: 19vw;
+  }
+  
+  .cloud-large {
+    width: 22vw;
+    height: 22vw;
+  }
+  
+  .cloud-small {
+    width: 15vw;
+    height: 15vw;
+  }
+  
+  .bottom-cloud {
+    margin-top: auto;
+  }
+  
+  @keyframes cloud-move {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10%); /* Movimento horizontal ajustado */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .cloud {
+    animation: cloud-move 10s infinite linear;
+  }
