@@ -95,13 +95,66 @@
   }
   
   .cloud-medium {
-    animation: cloud-move1 7s infinite linear;
+    animation: cloud-move1 17s infinite linear;
   }
 
   .cloud-large {
-    animation: cloud-move2 10s infinite linear;
+    animation: cloud-move2 20s infinite linear;
   }
 
   .cloud-small {
-    animation: cloud-move3 15s infinite linear;
+    animation: cloud-move3 25s infinite linear;
+  }
+
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%; /* Ajuste a altura conforme necessário */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .star {
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white, 0 0 10px lightblue; /* Efeito de brilho */
+    margin: auto;
+  }
+  
+  /* Tamanhos e posições individuais das estrelas */
+  .star1 {
+    width: 0.5vh;
+    height: 0.5vh;
+    animation: twinkle 6s infinite ease-in-out;
+  }
+  
+  .star2 {
+    width: 1vh;
+    height: 1vh;
+    animation: twinkle 8s infinite ease-in-out;
+  }
+  
+  .star3 {
+    width: 0.75vh;
+    height: 0.75vh;
+    animation: twinkle 4s infinite ease-in-out;
+  }
+  
+  /* Animação (opcional) */
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+  
+  .star {
+    
   }
