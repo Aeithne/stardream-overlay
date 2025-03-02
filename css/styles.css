@@ -124,32 +124,34 @@
   }
   
   /* Tamanhos e posições individuais das estrelas */
-  .star-small {
-    width: 0.5vh;
-    height: 0.5vh;
-    
-  }
+  
 
   .star-superfast {
-    animation: twinkle 6s infinite ease-in-out;
+    animation: twinkle 5s infinite ease-in-out;
   }
 
   .star-fast {
-    animation: twinkle 6s infinite ease-in-out;
+    animation: twinkle 8s infinite ease-in-out;
   }
 
   .star-slow {
-    animation: twinkle 6s infinite ease-in-out;
+    animation: twinkle 11s infinite ease-in-out;
+  }
+
+  .star-small {
+    width: 0.45vh;
+    height: 0.45vh;
+    
   }
   
   .star-large {
-    width: 1vh;
-    height: 1vh;
+    width: 0.85vh;
+    height: 0.85vh;
   }
   
   .star-medium {
-    width: 0.75vh;
-    height: 0.75vh;
+    width: 0.7vh;
+    height: 0.7vh;
   }
   
   /* Animação (opcional) */
@@ -158,6 +160,6 @@
       opacity: 1;
     }
     50% {
-      opacity: 0.3;
+      opacity: 0.4;
     }
   }
