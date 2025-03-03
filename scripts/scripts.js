@@ -1,9 +1,9 @@
 const nuvens = document.getElementsByClassName('cloud');
 const estrelas = document.getElementsByClassName('star');
 
-const clouds = ['cloud-large', 'cloud-medium', 'cloud-small'];
+const clouds = ['cloud-large', 'cloud-medium', 'cloud-medium', 'cloud-small'];
 const speeds = ['cloud-superfast', 'cloud-fast', 'cloud-slow'];
-const stars = ['star-large', 'star-medium', 'star-small'];
+const stars = ['star-large', 'star-medium', 'star-medium', 'star-small'];
 const twinkle = ['star-superfast', 'star-fast', 'star-slow'];
 
 const positions = [];

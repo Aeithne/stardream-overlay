@@ -1,165 +1,142 @@
+/* Estilos do céu */
 .sky {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom, #e0c2ff, #d0b0ff);
-    overflow: hidden;
-  }
-  
-  .top-sky, .medium-sky, .bottom-sky {
-    position: absolute;
-    width: 100%;
-    height: 33.33%; /* Divide o céu em três partes iguais */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .top-sky {
-    bottom: 26%;
-    opacity: 0.2;
-  }
-  
-  .medium-sky {
-    bottom: 8%;
-    opacity: 0.5;
-  }
-  
-  .bottom-sky {
-    bottom: -10%;
-    opacity: 0.8;
-  }
-  
-  .cloud {
-    background: white;
-    border-radius: 50%;
-    opacity: 1.0;
-    margin: -10%;
-  }
-  
-  .cloud-medium {
-    width: 19vw; /* Usando vw para tamanhos relativos à viewport */
-    height: 19vw;
-  }
-  
-  .cloud-large {
-    width: 22vw;
-    height: 22vw;
-  }
-  
-  .cloud-small {
-    width: 15vw;
-    height: 15vw;
-  }
-  
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #e0c2ff, #d0b0ff);
+  overflow: hidden;
+}
 
-  
+/* Estilos das camadas */
+.top-sky, .medium-sky, .bottom-sky {
+  position: absolute;
+  width: 100%;
+  height: 33.33%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
-  @keyframes cloud-move1 {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10%); /* Movimento horizontal ajustado */
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes cloud-move2 {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(20%); /* Movimento horizontal ajustado */
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
+.top-sky {
+  bottom: 26%;
+  opacity: 0.2;
+}
 
-  @keyframes cloud-move3 {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(30%); /* Movimento horizontal ajustado */
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-  
-  .cloud-medium {
-    animation: cloud-move1 17s infinite linear;
-  }
+.medium-sky {
+  bottom: 8%;
+  opacity: 0.5;
+}
 
-  .cloud-large {
-    animation: cloud-move2 20s infinite linear;
-  }
+.bottom-sky {
+  bottom: -10%;
+  opacity: 0.8;
+}
 
-  .cloud-small {
-    animation: cloud-move3 25s infinite linear;
-  }
+/* Estilos das nuvens */
+.cloud {
+  background: white;
+  border-radius: 50%;
+  opacity: 1.0;
+  margin: -10%;
+}
 
-  .stars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 20%; /* Ajuste a altura conforme necessário */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .star {
-    width: 5px;
-    height: 5px;
-    background: white;
-    border-radius: 50%;
-    box-shadow: 0 0 5px white, 0 0 10px lightblue; /* Efeito de brilho */
-    margin: auto;
-  }
-  
-  /* Tamanhos e posições individuais das estrelas */
-  
+.cloud-small {
+  width: 14vw;
+  height: 14vw;
+}
 
-  .star-superfast {
-    animation: twinkle 5s infinite ease-in-out;
-  }
+.cloud-medium {
+  width: 17vw;
+  height: 17vw;
+}
 
-  .star-fast {
-    animation: twinkle 8s infinite ease-in-out;
-  }
+.cloud-large {
+  width: 20vw;
+  height: 20vw;
+}
 
-  .star-slow {
-    animation: twinkle 11s infinite ease-in-out;
-  }
 
-  .star-small {
-    width: 0.45vh;
-    height: 0.45vh;
-    
-  }
-  
-  .star-large {
-    width: 0.85vh;
-    height: 0.85vh;
-  }
-  
-  .star-medium {
-    width: 0.7vh;
-    height: 0.7vh;
-  }
-  
-  /* Animação (opcional) */
-  @keyframes twinkle {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.4;
-    }
-  }
+/* Estilos das estrelas */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.star {
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px white, 0 0 10px lightblue;
+  margin: auto;
+}
+
+.star-small {
+  width: 0.45vh;
+  height: 0.45vh;
+}
+
+.star-medium {
+  width: 0.7vh;
+  height: 0.7vh;
+}
+
+.star-large {
+  width: 0.85vh;
+  height: 0.85vh;
+}
+
+/* Animações */
+@keyframes cloud-move1 {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(15%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes cloud-move2 {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(20%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes cloud-move3 {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(25%); }
+  100% { transform: translateY(0); }
+}
+
+.cloud-superfast {
+  animation: cloud-move3 14s infinite linear;
+}
+
+.cloud-fast {
+  animation: cloud-move2 19s infinite linear;
+}
+
+.cloud-slow {
+  animation: cloud-move1 23s infinite linear;
+}
+
+@keyframes twinkle {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+.star-superfast {
+  animation: twinkle 5s infinite ease-in-out;
+}
+
+.star-fast {
+  animation: twinkle 8s infinite ease-in-out;
+}
+
+.star-slow {
+  animation: twinkle 11s infinite ease-in-out;
+}
