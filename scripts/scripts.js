@@ -32,14 +32,16 @@ for (let i = 0; i < estrelas.length; i++) {
 
     let rx, ry;
     let tooClose;
+    let tries = 0;
 
     do {
         rx = 5 + Math.floor(Math.random() * 90);
         ry = 20 + Math.floor(Math.random() * 220);
         tooClose = isTooClose(rx, ry);
-        console.log(tooClose);
+        tries++;
+        if (tries >= 100) break;
     } while (tooClose);
-    console.log(tooClose);
+    if (tries >= 100) break;
 
     estrelas[i].style.left = `${rx}%`;
     estrelas[i].style.top = `${ry}px`;
