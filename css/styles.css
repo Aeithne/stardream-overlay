@@ -7,6 +7,24 @@
   overflow: hidden;
 }
 
+.night-sky {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #32174d, #221133);
+  overflow: hidden;
+  animation: sky-gradient-transition 20s infinite ease-in-out;
+}
+
+@keyframes sky-gradient-transition {
+  0%, 100% {
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1.0;
+  }
+}
+
 /* Estilos das camadas */
 .top-sky, .medium-sky, .bottom-sky {
   position: absolute;
@@ -18,17 +36,17 @@
 }
 
 .top-sky {
-  bottom: 26%;
+  bottom: 10%;
   opacity: 0.2;
 }
 
 .medium-sky {
-  bottom: 8%;
+  bottom: -10%;
   opacity: 0.5;
 }
 
 .bottom-sky {
-  bottom: -10%;
+  bottom: -30%;
   opacity: 0.8;
 }
 
@@ -41,18 +59,18 @@
 }
 
 .cloud-small {
-  width: 14vw;
-  height: 14vw;
+  width: 25vw;
+  height: 34vw;
 }
 
 .cloud-medium {
-  width: 17vw;
-  height: 17vw;
+  width: 28vw;
+  height: 37vw;
 }
 
 .cloud-large {
-  width: 20vw;
-  height: 20vw;
+  width: 31vw;
+  height: 40vw;
 }
 
 
@@ -95,32 +113,32 @@
 /* Animações */
 @keyframes cloud-move1 {
   0% { transform: translateY(0); }
-  50% { transform: translateY(15%); }
+  50% { transform: translateY(10%); }
   100% { transform: translateY(0); }
 }
 
 @keyframes cloud-move2 {
   0% { transform: translateY(0); }
-  50% { transform: translateY(20%); }
+  50% { transform: translateY(15%); }
   100% { transform: translateY(0); }
 }
 
 @keyframes cloud-move3 {
   0% { transform: translateY(0); }
-  50% { transform: translateY(25%); }
+  50% { transform: translateY(20%); }
   100% { transform: translateY(0); }
 }
 
 .cloud-superfast {
-  animation: cloud-move3 14s infinite linear;
+  animation: cloud-move3 19s infinite linear;
 }
 
 .cloud-fast {
-  animation: cloud-move2 19s infinite linear;
+  animation: cloud-move2 25s infinite linear;
 }
 
 .cloud-slow {
-  animation: cloud-move1 23s infinite linear;
+  animation: cloud-move1 29s infinite linear;
 }
 
 @keyframes twinkle {
